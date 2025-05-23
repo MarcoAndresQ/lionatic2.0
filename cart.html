@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Tienda Lionatic</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== ENCABEZADO ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="/" class="logo">LioNATIC</a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="/#categories">Categorías</a></li> 
+                    <li><a href="/#featured-products">Destacados</a></li>
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="/#contact">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <button id="search-btn" class="icon-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <a href="#" class="icon-btn" aria-label="Mi Cuenta"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="icon-btn active" aria-label="Carrito de Compras"> 
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button id="menu-toggle" class="icon-btn mobile-menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENIDO PRINCIPAL DE LA PÁGINA DEL CARRITO ==================== -->
+    <main class="section-padding cart-page-container">
+        <div class="container">
+            <h1 class="section-title">Tu Carrito de Compras</h1>
+
+            <div id="cart-items-container">
+                <!-- Los items del carrito se cargarán aquí por JavaScript -->
+                <!-- Ejemplo de cómo se vería un carrito vacío o si JS falla: -->
+                <!-- <p class="empty-cart-message">Tu carrito está vacío. <a href="/">Sigue comprando</a></p> -->
+            </div>
+
+            <div class="cart-summary-actions-container">
+                 <!-- El resumen del carrito se cargará aquí o abajo -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==================== PIE DE PÁGINA (Igual que en index.html) ==================== -->
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h4>LioNATIC</h4>
+                <p>Tu tienda de confianza para accesorios y tecnología móvil de última generación.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Política de Envíos</a></li>
+                    <li><a href="#">Política de Devoluciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@lionatic.com">contacto@lionatic.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+             <div class="footer-column">
+                <h4>Suscríbete</h4>
+                <p>Recibe ofertas y novedades directamente en tu correo.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 LioNATIC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- IMPORTANTE: products.js es necesario si addToCart y otras funciones en scrip.js
+         que podrían ser llamadas desde esta página (aunque no directamente para mostrar el carrito)
+         dependen de la lista global 'products'. Por seguridad, lo incluimos. -->
+    <script src="products.js"></script>
+    <script src="scrip.js"></script>
+</body>
+</html>
